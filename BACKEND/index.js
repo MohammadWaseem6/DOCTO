@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import connectDB from './config/db.js';
 import userRoutes from './Routes/UserRoutes.js';
+import cors from 'cors';
 
 // Load environment variables
 dotenv.config();
@@ -11,6 +12,7 @@ dotenv.config();
 const app = express();
 
 // Middleware
+app.use(cors()); // Add CORS middleware
 app.use(bodyParser.json());
 
 // Routes
