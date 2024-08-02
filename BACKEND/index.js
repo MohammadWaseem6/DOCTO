@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import connectDB from './config/db.js';
 import userRoutes from './Routes/UserRoutes.js';
+import doctorRoutes from './Routes/DoctorRoutes.js';
 import cors from 'cors';
 
 // Load environment variables
@@ -17,6 +18,7 @@ app.use(bodyParser.json());
 
 // Routes
 app.use('/api/users', userRoutes);
+app.use('/api/doctors', doctorRoutes); // Correctly reference the imported doctorRoutes
 
 app.get('/', (req, res) => {
     res.send('Welcome to the Online Doctor Appointment API');
