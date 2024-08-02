@@ -6,7 +6,7 @@ function DoctorDashboard() {
     useEffect(() => {
         const fetchPatients = async () => {
             try {
-                const response = await fetch('http://localhost:3000/api/patients'); // Adjust this URL to 
+                const response = await fetch('http://localhost:3000/api/patients'); 
                 const data = await response.json();
                 setPatients(data);
             } catch (error) {
