@@ -5,7 +5,7 @@ const SignUp = () => {
     const navigate = useNavigate()
     const [formData, setFormData] = useState({
         name: '',
-        email: '',
+        adhaar: '',
         bloodgroup: '',
         password: '',
         address: '',
@@ -33,12 +33,12 @@ const SignUp = () => {
 
             const result = await response.json();
             console.log(result);
-            // Handle success (e.g., redirect to login page or show success message)
+
         } catch (error) {
             console.error('Error:', error);
-            // Handle error (e.g., show error message)
+
         }
-        navigate('/login'); // Redirect to login page after successful signup
+        navigate('/login'); 
     };
 
     return (
